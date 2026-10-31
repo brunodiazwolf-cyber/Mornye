@@ -30,7 +30,7 @@ import 'package:mornye/services/shell_navigation_service.dart';
 import 'package:mornye/services/share_intent_service.dart';
 import 'package:mornye/services/music_playback_deck.dart';
 import 'package:mornye/services/listening_statistics.dart';
-import 'package:mornye/services/discord_presence_service.dart';
+//import 'package:mornye/services/discord_presence_service.dart';
 import 'package:mornye/services/notification_service.dart';
 import 'package:mornye/services/app_remote_config_service.dart';
 import 'package:mornye/services/update_checker.dart';
@@ -203,7 +203,7 @@ class _MainShellState extends ConsumerState<MainShell>
     playback.configure(settings);
     unawaited(
       DiscordPresenceService.instance.setEnabled(
-        settings.discordRichPresenceEnabled,
+//        settings.discordRichPresenceEnabled,
       ),
     );
     listeningRecorder.setEnabled(settings.listeningStatisticsEnabled);
@@ -799,7 +799,7 @@ class _MainShellState extends ConsumerState<MainShell>
     ref.listen(settingsProvider, (_, settings) {
       ref.read(musicPlayerRuntimeProvider).configure(settings);
     });
-    ref.listen(settingsProvider.select((s) => s.discordRichPresenceEnabled), (
+//    ref.listen(settingsProvider.select((s) => s.discordRichPresenceEnabled), (
       _,
       enabled,
     ) {

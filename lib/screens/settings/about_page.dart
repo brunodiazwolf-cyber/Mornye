@@ -194,7 +194,7 @@ class AboutPage extends StatelessWidget {
                 connected: true,
                 children: [
                   _AboutSettingsItem(
-                    icon: Icons.telegram,
+//                    icon: Icons.telegram,
                     title: context.l10n.aboutTelegramChannel,
                     subtitle: context.l10n.aboutTelegramChannelSubtitle,
                     onTap: () => _launchUrl('https://t.me/mornyeupdates'),
